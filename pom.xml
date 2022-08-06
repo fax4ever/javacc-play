@@ -10,6 +10,7 @@
     <version>1.0.0-SNAPSHOT</version>
     <modules>
         <module>javacc-proto-play</module>
+        <module>javacc-simple</module>
     </modules>
 
     <properties>
