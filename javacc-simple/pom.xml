@@ -24,6 +24,22 @@
         <version.plugin.javacc>3.0.0-SNAPSHOT</version.plugin.javacc>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${version.junit}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>${version.assertj}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
     <build>
         <plugins>
             <plugin>
@@ -40,7 +56,8 @@
                         <configuration>
                             <jdkVersion>11</jdkVersion>
                             <sourceDirectory>src/main/java/fax/play</sourceDirectory>
-                            <outputDirectory>${project.build.directory}/generated-sources/jcc</outputDirectory>
+                            <outputDirectory>${project.build.directory}/generated-sources/javacc</outputDirectory>
+                            <isStatic>false</isStatic>
                         </configuration>
                     </execution>
                 </executions>

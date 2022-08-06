@@ -1,5 +1,7 @@
 PARSER_BEGIN(Example)
 
+package fax.play;
+
 /** Simple brace matcher. */
 public class Example {
 
