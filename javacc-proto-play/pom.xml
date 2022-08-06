@@ -55,7 +55,7 @@
                         </goals>
                         <configuration>
                             <jdkVersion>11</jdkVersion>
-                            <sourceDirectory>src/main/java/fax/play</sourceDirectory>
+                            <sourceDirectory>src/main/resources/fax/play</sourceDirectory>
                             <outputDirectory>${project.build.directory}/jjtree</outputDirectory>
                             <isStatic>false</isStatic>
                             <multi>true</multi>
@@ -73,6 +73,7 @@
                             <sourceDirectory>${project.build.directory}/jjtree</sourceDirectory>
                             <outputDirectory>${project.build.directory}/generated-sources/javacc</outputDirectory>
                             <isStatic>false</isStatic>
+                            <sanityCheck>true</sanityCheck>
                         </configuration>
                     </execution>
                 </executions>
