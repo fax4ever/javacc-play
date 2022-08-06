@@ -48,15 +48,31 @@
                 <version>3.0.0-SNAPSHOT</version>
                 <executions>
                     <execution>
-                        <id>jjc</id>
+                        <id>jjtree</id>
                         <phase>generate-sources</phase>
+                        <goals>
+                            <goal>jjtree</goal>
+                        </goals>
+                        <configuration>
+                            <jdkVersion>11</jdkVersion>
+                            <sourceDirectory>src/main/java/fax/play</sourceDirectory>
+                            <outputDirectory>${project.build.directory}/jjtree</outputDirectory>
+                            <isStatic>false</isStatic>
+                            <multi>true</multi>
+                            <visitor>true</visitor>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>javacc</id>
+                        <phase>process-sources</phase>
                         <goals>
                             <goal>javacc</goal>
                         </goals>
                         <configuration>
                             <jdkVersion>11</jdkVersion>
-                            <sourceDirectory>src/main/java/fax/play</sourceDirectory>
-                            <outputDirectory>${project.build.directory}/generated-sources/jcc</outputDirectory>
+                            <sourceDirectory>${project.build.directory}/jjtree</sourceDirectory>
+                            <outputDirectory>${project.build.directory}/generated-sources/javacc</outputDirectory>
+                            <isStatic>false</isStatic>
                         </configuration>
                     </execution>
                 </executions>

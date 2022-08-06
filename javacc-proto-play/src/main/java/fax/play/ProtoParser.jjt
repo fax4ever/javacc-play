@@ -19,6 +19,8 @@ options {
 
 PARSER_BEGIN(ProtoParser)
 
+package fax.play;
+
 /**
  *
  *  Protocol Buffers grammar  for JavaCC
